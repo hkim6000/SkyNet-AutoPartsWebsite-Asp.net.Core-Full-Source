@@ -1,0 +1,279 @@
+.nz-site {
+    --nz-bg: #F3F4F6;
+    --nz-paper: #FFFFFF;
+    --nz-ink: #161B22;
+    --nz-ink2: #5B6471;
+    --nz-line: #DCE0E6;
+    --nz-soft: #E8EBF0;
+    --nz-accent: #D9531E;
+    --nz-steel: #2E5C8A;
+    --nz-deep: #10151B;
+    --nz-ok: #2F7A4F;
+    --nz-err: #B3261E;
+    --nz-warn: #A86400;
+    --nz-head: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    --nz-text: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--nz-text);
+    color: var(--nz-ink);
+    background: var(--nz-bg);
+    font-size: 16px;
+    line-height: 1.55;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nz-site[data-theme="dark"] {
+    --nz-bg: #0F1319;
+    --nz-paper: #171C24;
+    --nz-ink: #EEF1F5;
+    --nz-ink2: #A3ADBA;
+    --nz-line: #2A323D;
+    --nz-soft: #1F2630;
+    --nz-accent: #FF7A3D;
+    --nz-steel: #7FB0E0;
+    color-scheme: dark;
+}
+
+.nz-site *, .nz-site *::before, .nz-site *::after { box-sizing: border-box; }
+.nz-site a { color: inherit; text-decoration: none; }
+.nz-site img { display: block; max-width: 100%; height: auto; }
+:where(.nz-site) :where(button, input, select, textarea) { font: inherit; color: inherit; }
+.nz-site h1, .nz-site h2, .nz-site h3, .nz-site h4 { margin: 0; line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
+.nz-site p { margin: 0; }
+body { margin: 0; }
+.nz-main { flex: 1; }
+.nz-wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+.nz-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.nz-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 1px solid var(--nz-ink); border-radius: 6px; background: var(--nz-ink); color: var(--nz-bg) !important; font-weight: 700; cursor: pointer; transition: opacity 0.15s; white-space: nowrap; }
+.nz-btn:hover { opacity: 0.86; }
+.nz-btn-ghost { background: transparent; color: var(--nz-ink) !important; }
+.nz-btn-accent { background: var(--nz-accent); border-color: var(--nz-accent); color: #fff !important; }
+.nz-btn-wide { width: 100%; }
+.nz-btn-sm { min-height: 36px; padding: 0 14px; font-size: 14px; }
+.nz-btn-danger { background: transparent; border-color: var(--nz-err); color: var(--nz-err) !important; }
+.nz-btn:disabled { opacity: 0.45; cursor: default; }
+.nz-ibtn { width: 40px; height: 40px; border: 0; border-radius: 6px; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: inherit; flex: none; }
+.nz-ibtn:hover { background: var(--nz-soft); }
+.nz-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.nz-field > span { font-size: 13px; font-weight: 700; color: var(--nz-ink2); }
+.nz-field input, .nz-field select, .nz-field textarea { width: 100%; min-height: 44px; border: 1px solid var(--nz-line); border-radius: 6px; padding: 9px 12px; background: var(--nz-paper); outline: none; }
+.nz-field input:focus, .nz-field select:focus, .nz-field textarea:focus { border-color: var(--nz-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--nz-accent) 18%, transparent); }
+.nz-err { display: block; font-style: normal; font-size: 13.5px; color: var(--nz-err); font-weight: 600; }
+.nz-err:empty { display: none; }
+.nz-toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 30px); background: var(--nz-ink); color: var(--nz-bg); padding: 12px 20px; border-radius: 6px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s; z-index: 300; max-width: calc(100vw - 32px); }
+.nz-toast.nz-open { opacity: 1; transform: translate(-50%, 0); }
+.nz-scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 80; }
+.nz-scrim.nz-open { opacity: 1; pointer-events: auto; }
+.nz-av { --h: 210; width: 36px; height: 36px; flex: none; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; letter-spacing: 0.02em; color: #fff; background: hsl(var(--h) 34% 40%); }
+.nz-st { font-size: 12.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--nz-soft); color: var(--nz-ink2); white-space: nowrap; justify-self: start; display: inline-block; }
+.nz-st-live, .nz-st-in, .nz-st-won, .nz-st-replied, .nz-st-hired, .nz-st-active, .nz-st-on, .nz-st-open { background: #E2F1E8; color: #23663F; }
+.nz-st-low, .nz-st-quoted, .nz-st-reviewing, .nz-st-interview, .nz-st-order { background: #FCEFD9; color: #8A5200; }
+.nz-st-offer, .nz-st-premier { background: #E6EEF8; color: #2A4F86; }
+.nz-st-new { background: #F6E3DA; color: #8E3B1C; }
+.nz-st-out, .nz-st-lost { background: #FBE6E0; color: #8C3A22; }
+.nz-st-draft, .nz-st-retired, .nz-st-closed, .nz-st-declined, .nz-st-inactive, .nz-st-off { background: #ECEAE6; color: #55524C; }
+
+.nz-admin { background: #EEF0F3; }
+.nz-site [hidden] { display: none !important; }
+.nz-ahead { position: sticky; top: 0; z-index: 60; min-height: 60px; display: flex; align-items: center; gap: 12px; padding: 0 18px; background: var(--nz-deep); color: #E6EAED; }
+.nz-abrand { display: flex; align-items: center; gap: 10px; font-family: var(--nz-head); font-weight: 800; font-size: 17px; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap; color: #fff; min-width: 0; }
+.nz-abrand .nz-logo { width: 32px; height: 32px; flex: none; }
+.nz-abrand b { font-weight: inherit; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.nz-abrand span { font-family: var(--nz-text); font-size: 12px; font-weight: 800; color: #FF9A66; text-transform: uppercase; letter-spacing: 0.16em; }
+.nz-ahead .nz-ibtn:hover { background: rgba(255, 255, 255, 0.1); }
+.nz-grow { flex: 1; }
+.nz-who { display: flex; align-items: center; gap: 10px; min-width: 0; flex: none; }
+.nz-who-t { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.nz-who-t b { font-size: 14px; white-space: nowrap; color: #fff; }
+.nz-who-t small { font-size: 12.5px; color: #A3ADBA; white-space: nowrap; }
+.nz-view, .nz-out { font-size: 14px; font-weight: 600; min-height: 36px; padding: 0 14px; border-radius: 6px; border: 1px solid #3A4654; background: none; cursor: pointer; display: inline-flex; align-items: center; white-space: nowrap; color: #E6EAED !important; }
+.nz-view:hover, .nz-out:hover { border-color: #FF9A66; }
+.nz-side { position: fixed; top: 60px; left: 0; bottom: 0; width: 228px; padding: 16px 12px; background: var(--nz-paper); border-right: 1px solid var(--nz-line); overflow: auto; z-index: 50; }
+.nz-nav-top { display: none; }
+.nz-amenu { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.nz-al { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 6px; color: var(--nz-ink2); font-weight: 600; font-size: 15px; }
+.nz-al:hover, .nz-al.nz-on { background: var(--nz-soft); color: var(--nz-ink); }
+.nz-al.nz-on { box-shadow: inset 3px 0 0 var(--nz-accent); }
+.nz-cnt { font-style: normal; font-size: 12px; min-width: 22px; height: 22px; padding: 0 7px; border-radius: 999px; background: var(--nz-accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.nz-amain { margin-left: 228px; padding: 26px 32px 72px; flex: 1; min-width: 0; }
+.nz-loading { color: var(--nz-ink2); padding: 40px 0; }
+.nz-ptop { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.nz-site .nz-ptop h1 { font-family: var(--nz-head); font-size: 30px; font-weight: 800; }
+.nz-site .nz-ptop p { color: var(--nz-ink2); margin-top: 4px; }
+.nz-acts { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.nz-panel { background: var(--nz-paper); border: 1px solid var(--nz-line); border-radius: 10px; padding: 20px; min-width: 0; }
+.nz-panel + .nz-panel { margin-top: 18px; }
+.nz-site .nz-panel h2 { font-size: 17px; font-weight: 800; margin-bottom: 12px; }
+.nz-ph { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.nz-ph a { font-size: 14px; font-weight: 700; color: var(--nz-accent); }
+.nz-grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+.nz-grid2 > .nz-panel + .nz-panel { margin-top: 0; }
+.nz-row { display: flex; gap: 14px; align-items: center; padding: 10px 0; border-top: 1px solid var(--nz-line); min-width: 0; }
+.nz-row:first-of-type { border-top: 0; }
+.nz-row > div { min-width: 0; flex: 1; }
+.nz-row b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nz-row small { color: var(--nz-ink2); font-size: 13.5px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nz-row img.nz-th64 { width: 64px; height: 43px; object-fit: cover; border-radius: 6px; flex: none; }
+.nz-none { color: var(--nz-ink2); padding: 10px 0; }
+.nz-st-live, .nz-st-on { background: #E2F1E8; color: #23663F; }
+.nz-st-view { background: #E3ECF7; color: #1F4E8C; }
+.nz-modal { position: fixed; inset: 0; z-index: 150; background: rgba(20, 20, 22, 0.55); display: none; align-items: flex-start; justify-content: center; padding: 40px 20px; overflow: auto; }
+.nz-modal.nz-open { display: flex; }
+.nz-mbox { position: relative; background: var(--nz-paper); border-radius: 12px; width: min(860px, 100%); padding: 24px; }
+.nz-mclose { position: absolute; top: 10px; right: 10px; }
+.nz-site .nz-mbox h2 { font-family: var(--nz-head); font-size: 23px; font-weight: 800; margin-bottom: 14px; padding-right: 40px; }
+.nz-site .nz-mbox h3 { font-size: 13px; font-weight: 800; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--nz-ink2); }
+.nz-hint { font-size: 13.5px; color: var(--nz-ink2); }
+.nz-ok-box { padding: 12px 14px; border-radius: 8px; background: #E2F1E8; color: #1E4D33; }
+.nz-ok-box:empty { display: none; }
+.nz-warn-box { padding: 12px 16px; border-radius: 8px; background: #FCEFD9; color: #5A3A00; }
+.nz-info-box { padding: 12px 16px; border-radius: 8px; background: #E3ECF7; color: #1F3A5F; }
+.nz-chk { display: flex; align-items: center; gap: 10px; font-weight: 600; cursor: pointer; }
+.nz-chk input { width: 18px; height: 18px; accent-color: var(--nz-accent); flex: none; }
+.nz-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.nz-chip { min-height: 34px; padding: 0 13px; border-radius: 999px; border: 1px solid var(--nz-line); background: var(--nz-paper); cursor: pointer; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.nz-chip:hover { border-color: var(--nz-ink); }
+.nz-chip.nz-act { background: var(--nz-ink); border-color: var(--nz-ink); color: var(--nz-paper); }
+.nz-chip em { font-style: normal; opacity: 0.6; margin-left: 4px; }
+.nz-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-bottom: 14px; }
+.nz-bar input, .nz-bar select { min-height: 38px; border: 1px solid var(--nz-line); border-radius: 6px; padding: 0 10px; background: var(--nz-paper); }
+.nz-bar input[type="search"] { width: 240px; }
+.nz-bar label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700; color: var(--nz-ink2); }
+.nz-bar label.nz-chk { flex-direction: row; align-items: center; font-size: 14px; color: var(--nz-ink); align-self: center; }
+.nz-period { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+.nz-pf { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700; color: var(--nz-ink2); }
+.nz-pf input { min-height: 34px; border: 1px solid var(--nz-line); border-radius: 6px; padding: 0 8px; background: var(--nz-paper); }
+.nz-tbl { background: var(--nz-paper); border: 1px solid var(--nz-line); border-radius: 10px; overflow: hidden; }
+.nz-tr { display: grid; grid-template-columns: var(--cols); gap: 12px; align-items: center; padding: 11px 16px; border-top: 1px solid var(--nz-line); font-size: 14.5px; }
+.nz-tr:first-child { border-top: 0; }
+.nz-th { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--nz-ink2); background: #F5F6F8; }
+.nz-tr > * { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.nz-tr b { font-weight: 700; }
+.nz-tr small { display: block; color: var(--nz-ink2); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nz-tr .nz-btn { justify-self: end; }
+.nz-tr img.nz-thumb { width: 72px; height: 48px; object-fit: cover; border-radius: 6px; display: block; }
+.nz-num { text-align: right; font-variant-numeric: tabular-nums; }
+.nz-code { font-family: Consolas, 'Courier New', monospace; font-weight: 700; letter-spacing: 0.03em; }
+.nz-pager { display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 14px; font-size: 14px; color: var(--nz-ink2); font-weight: 600; }
+.nz-form { display: grid; gap: 12px; }
+.nz-f2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.nz-f3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.nz-f4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.nz-field textarea { resize: vertical; }
+.nz-dl { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 6px 14px; margin: 0; font-size: 14.5px; }
+.nz-dl dt { color: var(--nz-ink2); font-weight: 700; }
+.nz-dl dd { margin: 0; overflow-wrap: anywhere; }
+.nz-dl a { color: var(--nz-accent); text-decoration: underline; text-underline-offset: 2px; }
+.nz-mfoot { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--nz-line); }
+.nz-mfoot .nz-left { margin-right: auto; }
+.nz-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--nz-line); margin-bottom: 16px; flex-wrap: wrap; }
+.nz-tab { border: 0; background: none; padding: 10px 14px; font-weight: 700; font-size: 15px; color: var(--nz-ink2); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; }
+.nz-tab.nz-act { color: var(--nz-ink); border-bottom-color: var(--nz-accent); }
+.nz-tab em { font-style: normal; font-size: 12px; background: var(--nz-soft); padding: 1px 7px; border-radius: 999px; margin-left: 6px; }
+
+.nz-pk { position: fixed; inset: 0; z-index: 170; background: rgba(20, 20, 22, 0.55); display: none; align-items: flex-start; justify-content: center; padding: 4vh 16px; overflow: auto; }
+.nz-pk.nz-open { display: flex; }
+.nz-pkbox { background: var(--nz-paper); border-radius: 14px; width: min(980px, 100%); display: flex; flex-direction: column; max-height: 92vh; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3); }
+.nz-pkbox > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 6px; }
+.nz-site .nz-pkbox h2 { font-size: 19px; font-weight: 800; }
+.nz-pkbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 8px 20px 12px; border-bottom: 1px solid var(--nz-line); }
+.nz-pkbar input[type="search"], .nz-pkbar select { min-height: 38px; border: 1px solid var(--nz-line); border-radius: 6px; padding: 0 10px; background: var(--nz-paper); }
+.nz-pkbar input[type="search"] { flex: 1 1 200px; min-width: 0; }
+.nz-pkup { position: relative; overflow: hidden; }
+.nz-pkup input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.nz-pkgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); grid-auto-rows: 132px; gap: 10px; padding: 14px 20px; overflow: auto; min-height: 200px; }
+.nz-pki { position: relative; display: flex; flex-direction: column; padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden; background: var(--nz-soft); cursor: pointer; text-align: left; min-width: 0; }
+.nz-pki:hover { border-color: var(--nz-ink2); }
+.nz-pki.nz-on { border-color: var(--nz-accent); box-shadow: 0 0 0 2px var(--nz-accent); }
+.nz-pki img { width: 100%; height: 100px; object-fit: cover; display: block; flex: none; }
+.nz-pki > span { font-size: 12.5px; font-weight: 600; padding: 4px 7px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--nz-ink); }
+.nz-pki i { position: absolute; right: 6px; top: 6px; width: 24px; height: 24px; border-radius: 999px; background: var(--nz-accent); color: #fff; font-style: normal; font-weight: 800; font-size: 13px; display: none; align-items: center; justify-content: center; }
+.nz-pki.nz-on i { display: inline-flex; }
+.nz-vbadge { position: absolute; left: 6px; top: 6px; background: rgba(10, 10, 12, 0.72); color: #fff; font-size: 11.5px; font-weight: 700; padding: 2px 7px 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px; }
+.nz-vbadge::before { content: ""; border-left: 7px solid #fff; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.nz-dbadge { position: absolute; left: 6px; top: 6px; background: var(--nz-accent); color: #fff; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 4px; }
+.nz-pkmore { padding: 0 20px 10px; text-align: center; }
+.nz-pkbox > footer { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 12px 20px 16px; border-top: 1px solid var(--nz-line); flex-wrap: wrap; }
+.nz-pkbox > footer span { margin-right: auto; font-size: 14px; color: var(--nz-ink2); font-weight: 600; }
+.nz-pkerr { padding: 0 20px; }
+.nz-busy { opacity: 0.6; pointer-events: none; }
+
+.nz-nztbl { --cols: 90px minmax(0, 2fr) 130px 110px 90px 80px 64px; }
+.nz-imgpick { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 14px; align-items: start; }
+.nz-imgbox { position: relative; aspect-ratio: 16 / 9; border: 2px dashed var(--nz-line); border-radius: 8px; background: var(--nz-soft); display: flex; align-items: center; justify-content: center; color: var(--nz-ink2); font-weight: 700; cursor: pointer; overflow: hidden; padding: 0; width: 100%; }
+.nz-imgbox img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.nz-body { min-height: 260px; font-family: var(--nz-text); }
+.nz-rt { display: flex; gap: 4px; margin-bottom: 6px; }
+.nz-rt button { min-width: 32px; height: 30px; border: 1px solid var(--nz-line); border-radius: 5px; background: var(--nz-paper); cursor: pointer; font-weight: 800; font-size: 13px; padding: 0 8px; }
+.nz-ed { border: 1px solid var(--nz-line); border-radius: 6px; padding: 10px 12px; min-height: 240px; background: var(--nz-paper); outline: none; font-size: 15px; line-height: 1.6; }
+.nz-ed:focus { border-color: var(--nz-accent); }
+.nz-ed p + p, .nz-ed p + ul, .nz-ed ul + p { margin-top: 10px; }
+.nz-ed ul, .nz-ed ol { margin: 6px 0 0; padding-left: 22px; }
+
+.nz-ask { position: fixed; inset: 0; z-index: 200; background: rgba(20, 20, 22, 0.55); display: none; align-items: center; justify-content: center; padding: 20px; }
+.nz-ask.nz-open { display: flex; }
+.nz-askbox { background: var(--nz-paper); border-radius: 10px; width: min(440px, 100%); padding: 22px 22px 18px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25); }
+.nz-site .nz-askbox h2 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+.nz-site .nz-askbox p { color: var(--nz-ink2); margin: 0; overflow-wrap: anywhere; }
+.nz-site .nz-askbox p:empty { display: none; }
+.nz-askbox input { display: none; width: 100%; min-height: 44px; margin-top: 14px; border: 1px solid var(--nz-line); border-radius: 6px; padding: 9px 12px; background: var(--nz-paper); outline: none; }
+.nz-askbox input:focus { border-color: var(--nz-ink); }
+.nz-askbox.nz-askin input { display: block; }
+.nz-askbox .nz-err { margin-top: 6px; }
+.nz-askbox .nz-err:empty { display: none; }
+.nz-askacts { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+.nz-askacts .nz-btn { min-width: 96px; }
+.nz-askacts .nz-askdel { background: var(--nz-err); border-color: var(--nz-err); color: #fff !important; }
+
+@media (max-width: 1100px) {
+    .nz-who-t, .nz-view { display: none; }
+}
+
+@media (max-width: 900px) {
+    .nz-side { top: 0; width: min(300px, 86vw); z-index: 90; transform: translateX(-100%); transition: transform 0.25s; }
+    .nz-side.nz-open { transform: none; }
+    .nz-side .nz-nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; }
+    .nz-amain { margin-left: 0; padding: 22px 16px 64px; }
+    .nz-grid2 { grid-template-columns: minmax(0, 1fr); }
+    .nz-th { display: none; }
+    .nz-tr { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 12px; padding: 12px 14px; }
+    .nz-tr > [data-l]::before { content: attr(data-l); display: block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--nz-ink2); }
+    .nz-tr > .nz-wide { grid-column: 1 / -1; }
+    .nz-tr .nz-btn { justify-self: start; }
+    .nz-num { text-align: left; }
+}
+
+@media (min-width: 901px) {
+    .nz-burger { display: none; }
+}
+
+@media (max-width: 640px) {
+    .nz-ahead { padding: 0 8px; gap: 6px; }
+    .nz-abrand { font-size: 17px; flex: 0 1 auto; overflow: hidden; }
+    .nz-abrand span { display: none; }
+    .nz-site .nz-ptop h1 { font-size: 27px; }
+    .nz-panel { padding: 16px 14px; }
+    .nz-mbox { padding: 20px 14px; }
+    .nz-modal { padding: 12px 8px; }
+    .nz-out { padding: 0 10px; }
+    .nz-who { display: none; }
+    .nz-bar input[type="search"] { width: 100%; }
+    .nz-bar > * { flex: 1 1 140px; }
+    .nz-bar > label:has(input[type="search"]) { flex-basis: 100%; }
+    .nz-f2, .nz-f3, .nz-f4 { grid-template-columns: minmax(0, 1fr); }
+    .nz-dl, .nz-mbox .nz-dl { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .nz-pk { padding: 0; }
+    .nz-pkbox { border-radius: 0; max-height: none; min-height: 100%; }
+    .nz-pkgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 12px 14px; }
+    .nz-pkbar { padding: 8px 14px 12px; }
+    .nz-pkbox > header { padding: 14px 14px 4px; }
+    .nz-pkbox > footer { padding: 12px 14px 16px; }
+}
+
+@media (max-width: 640px) {
+    .nz-imgpick { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+*.user
+temp/
+logs/*.log
+data/activity.json
+data/subscribers.json
+data/admin.json
+data/files/*
+!data/files/resumes/
+data/files/resumes/*
+!data/files/resumes/sample-*.pdf
+images/uploads/

@@ -1,0 +1,32 @@
+<div class="dl-site" id="dl-site" data-page="Dealers" data-theme="{plhd_theme}" style="{plhd_style}">
+<div class="dl-strip"><div class="dl-wrap dl-strip-in"><span>{plhd_today}</span><span class="dl-strip-r"><a href="tel:{plhd_tel}">{plhd_phone}</a><a href="mailto:{plhd_email}" class="dl-smail">{plhd_email}</a></span></div></div>
+<header class="dl-top">
+    <div class="dl-wrap dl-top-in">
+        <button type="button" class="dl-ibtn dl-burger" aria-label="Menu" onclick="DealersJs.openNav()"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <a class="dl-brand" href="Home"><svg class="dl-logo" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="var(--dl-accent)"/><path d="M11 10h18M11 30h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M12 14l16 3-16 3 16 3-16 3" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg><span><b>{plhd_name}</b><small>{plhd_town}</small></span></a>
+        <nav class="dl-nav" aria-label="Main">{plhd_nav}</nav>
+        <div class="dl-tools">
+            <a class="dl-cmp" href="Products?compare=1" aria-label="Compare products" title="Compare products"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v16M15 4v16"/><path d="M4 9h5M15 9h5M4 15h5M15 15h5"/></svg><i id="dl-ccount" hidden>0</i></a>
+            <button type="button" class="dl-ibtn" aria-label="Light or dark" title="Light or dark" onclick="DealersJs.toggleTheme()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"/></svg></button>
+            <a class="dl-btn dl-btn-accent dl-cta" href="Contact#quote">Get a quote</a>
+        </div>
+    </div>
+</header>
+<aside class="dl-drawer" id="dl-nav" aria-label="Menu">
+    <div class="dl-dr-top"><b>{plhd_name}</b><button type="button" class="dl-ibtn" aria-label="Close" onclick="DealersJs.closeNav()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <nav class="dl-dr-list">{plhd_drawer}</nav>
+    <a class="dl-btn dl-btn-accent dl-btn-wide" href="Contact#quote">Request a quote</a>
+</aside>
+<div class="dl-scrim" id="dl-scrim" onclick="DealersJs.closeNav()"></div>
+<main class="dl-main" id="dl-main">{plhd_main}</main>
+<footer class="dl-foot">
+    <div class="dl-wrap dl-foot-in">
+        <div class="dl-fcol dl-fabout"><a class="dl-fbrand" href="Home">{plhd_name}</a><p>{plhd_tagline}</p><p class="dl-faddr">{plhd_addr}<br><a href="tel:{plhd_tel}">{plhd_phone}</a><br><a href="mailto:{plhd_email}">{plhd_email}</a></p></div>
+        <div class="dl-fcol"><b>Products</b><a href="Products?cat=coilovers">Coilovers</a><a href="Products?cat=struts">Struts</a><a href="Products?cat=shocks">Shocks</a><a href="Products?cat=liftkits">Lift kits</a><a href="Products?cat=air">Air suspension</a><a href="Products">All products</a></div>
+        <div class="dl-fcol"><b>Company</b><a href="Capabilities">Capabilities</a><a href="Industries">Industries</a><a href="Dealers">Dealers</a><a href="News">News</a><a href="Careers">Careers</a><a href="About">About</a><a href="Contact">Contact</a></div>
+        <div class="dl-fcol dl-fnews"><b>Product news by email</b><p>New applications, tech notes and dealer events, about once a month.</p><form class="dl-nform" onsubmit="return DealersJs.subscribe()" novalidate><label class="dl-sr" for="dl-nlmail">Email</label><input type="email" id="dl-nlmail" maxlength="120" placeholder="you@example.com" autocomplete="email"><button type="submit" class="dl-btn dl-btn-accent dl-btn-sm">Sign up</button></form><em class="dl-err dl-ferr" id="dl-e-nlmail" role="alert"></em><span class="dl-flinks"><a href="Contact">Contact</a> &middot; <a href="AdminLogin">Admin sign in</a></span></div>
+    </div>
+    <div class="dl-wrap dl-copy"><span>&copy; 2026 {plhd_name} &middot; {plhd_legal}</span><span>A fictional manufacturer built with the SkyNet Framework. Products, vehicles and people are invented.</span></div>
+</footer>
+<div class="dl-toast" id="dl-toast" role="status" aria-live="polite"></div>
+</div>

@@ -1,0 +1,32 @@
+<div class="cr-site" id="cr-site" data-page="Careers" data-theme="{plhd_theme}" style="{plhd_style}">
+<div class="cr-strip"><div class="cr-wrap cr-strip-in"><span>{plhd_today}</span><span class="cr-strip-r"><a href="tel:{plhd_tel}">{plhd_phone}</a><a href="mailto:{plhd_email}" class="cr-smail">{plhd_email}</a></span></div></div>
+<header class="cr-top">
+    <div class="cr-wrap cr-top-in">
+        <button type="button" class="cr-ibtn cr-burger" aria-label="Menu" onclick="CareersJs.openNav()"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <a class="cr-brand" href="Home"><svg class="cr-logo" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="var(--cr-accent)"/><path d="M11 10h18M11 30h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M12 14l16 3-16 3 16 3-16 3" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/></svg><span><b>{plhd_name}</b><small>{plhd_town}</small></span></a>
+        <nav class="cr-nav" aria-label="Main">{plhd_nav}</nav>
+        <div class="cr-tools">
+            <a class="cr-cmp" href="Products?compare=1" aria-label="Compare products" title="Compare products"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v16M15 4v16"/><path d="M4 9h5M15 9h5M4 15h5M15 15h5"/></svg><i id="cr-ccount" hidden>0</i></a>
+            <button type="button" class="cr-ibtn" aria-label="Light or dark" title="Light or dark" onclick="CareersJs.toggleTheme()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5z"/></svg></button>
+            <a class="cr-btn cr-btn-accent cr-cta" href="Contact#quote">Get a quote</a>
+        </div>
+    </div>
+</header>
+<aside class="cr-drawer" id="cr-nav" aria-label="Menu">
+    <div class="cr-dr-top"><b>{plhd_name}</b><button type="button" class="cr-ibtn" aria-label="Close" onclick="CareersJs.closeNav()"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <nav class="cr-dr-list">{plhd_drawer}</nav>
+    <a class="cr-btn cr-btn-accent cr-btn-wide" href="Contact#quote">Request a quote</a>
+</aside>
+<div class="cr-scrim" id="cr-scrim" onclick="CareersJs.closeNav()"></div>
+<main class="cr-main" id="cr-main">{plhd_main}</main>
+<footer class="cr-foot">
+    <div class="cr-wrap cr-foot-in">
+        <div class="cr-fcol cr-fabout"><a class="cr-fbrand" href="Home">{plhd_name}</a><p>{plhd_tagline}</p><p class="cr-faddr">{plhd_addr}<br><a href="tel:{plhd_tel}">{plhd_phone}</a><br><a href="mailto:{plhd_email}">{plhd_email}</a></p></div>
+        <div class="cr-fcol"><b>Products</b><a href="Products?cat=coilovers">Coilovers</a><a href="Products?cat=struts">Struts</a><a href="Products?cat=shocks">Shocks</a><a href="Products?cat=liftkits">Lift kits</a><a href="Products?cat=air">Air suspension</a><a href="Products">All products</a></div>
+        <div class="cr-fcol"><b>Company</b><a href="Capabilities">Capabilities</a><a href="Industries">Industries</a><a href="Dealers">Dealers</a><a href="News">News</a><a href="Careers">Careers</a><a href="About">About</a><a href="Contact">Contact</a></div>
+        <div class="cr-fcol cr-fnews"><b>Product news by email</b><p>New applications, tech notes and dealer events, about once a month.</p><form class="cr-nform" onsubmit="return CareersJs.subscribe()" novalidate><label class="cr-sr" for="cr-nlmail">Email</label><input type="email" id="cr-nlmail" maxlength="120" placeholder="you@example.com" autocomplete="email"><button type="submit" class="cr-btn cr-btn-accent cr-btn-sm">Sign up</button></form><em class="cr-err cr-ferr" id="cr-e-nlmail" role="alert"></em><span class="cr-flinks"><a href="Contact">Contact</a> &middot; <a href="AdminLogin">Admin sign in</a></span></div>
+    </div>
+    <div class="cr-wrap cr-copy"><span>&copy; 2026 {plhd_name} &middot; {plhd_legal}</span><span>A fictional manufacturer built with the SkyNet Framework. Products, vehicles and people are invented.</span></div>
+</footer>
+<div class="cr-toast" id="cr-toast" role="status" aria-live="polite"></div>
+</div>
